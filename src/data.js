@@ -1,4 +1,4 @@
-export const CARD_BACK = "/img/backCard.webp";
+export const CARD_BACK = "img/backCard.webp";
 
 export const CARDS = [
   {
@@ -7,7 +7,7 @@ export const CARDS = [
     section: "Я сейчас",
     sectionSlug: "state",
     title: "Последний урок / Закат",
-    image: "/img/im1.webp",
+    image: "img/im1.webp",
     questions: [
       "Что здесь похоже на ваше состояние сегодня?",
       "Какая деталь первой привлекла внимание?",
@@ -22,7 +22,7 @@ export const CARDS = [
     section: "Я сейчас",
     sectionSlug: "state",
     title: "Доска / Небо",
-    image: "/img/im2.webp",
+    image: "img/im2.webp",
     questions: [
       "Что здесь похоже на ваше состояние сегодня?",
       "Какая деталь первой привлекла внимание?",
@@ -37,7 +37,7 @@ export const CARDS = [
     section: "Я сейчас",
     sectionSlug: "state",
     title: "Пустой кабинет / Озеро",
-    image: "/img/im3.webp",
+    image: "img/im3.webp",
     questions: [
       "Что здесь похоже на ваше состояние сегодня?",
       "Какая деталь первой привлекла внимание?",
@@ -52,7 +52,7 @@ export const CARDS = [
     section: "Я сейчас",
     sectionSlug: "state",
     title: "Журнал / Карта",
-    image: "/img/im4.webp",
+    image: "img/im4.webp",
     questions: [
       "Что здесь похоже на ваше состояние сегодня?",
       "Какая деталь первой привлекла внимание?",
@@ -67,7 +67,7 @@ export const CARDS = [
     section: "Я сейчас",
     sectionSlug: "state",
     title: "Звонок / Волна",
-    image: "/img/im5.webp",
+    image: "img/im5.webp",
     questions: [
       "Что здесь похоже на ваше состояние сегодня?",
       "Какая деталь первой привлекла внимание?",
@@ -82,7 +82,7 @@ export const CARDS = [
     section: "Я сейчас",
     sectionSlug: "state",
     title: "Перемена / Ветер",
-    image: "/img/im6.webp",
+    image: "img/im6.webp",
     questions: [
       "Что здесь похоже на ваше состояние сегодня?",
       "Какая деталь первой привлекла внимание?",
@@ -97,7 +97,7 @@ export const CARDS = [
     section: "Я сейчас",
     sectionSlug: "state",
     title: "Учительская чашка / Огонек",
-    image: "/img/im7.webp",
+    image: "img/im7.webp",
     questions: [
       "Что здесь похоже на ваше состояние сегодня?",
       "Какая деталь первой привлекла внимание?",
@@ -112,7 +112,7 @@ export const CARDS = [
     section: "Я сейчас",
     sectionSlug: "state",
     title: "Педсовет / Хор",
-    image: "/img/im8.webp",
+    image: "img/im8.webp",
     questions: [
       "Что здесь похоже на ваше состояние сегодня?",
       "Какая деталь первой привлекла внимание?",
@@ -127,7 +127,7 @@ export const CARDS = [
     section: "Зри в корень",
     sectionSlug: "root",
     title: "Родительский чат / Рой",
-    image: "/img/im9.webp",
+    image: "img/im9.webp",
     questions: [
       "Что здесь действительно ваше?",
       "Что вы несете автоматически?",
@@ -143,7 +143,7 @@ export const CARDS = [
     section: "Зри в корень",
     sectionSlug: "root",
     title: "Стопка документов / Башня",
-    image: "/img/im10.webp",
+    image: "img/im10.webp",
     questions: [
       "Что здесь действительно ваше?",
       "Что вы несете автоматически?",
@@ -159,7 +159,7 @@ export const CARDS = [
     section: "Зри в корень",
     sectionSlug: "root",
     title: "Ключи от кабинетов / Якоря",
-    image: "/img/im11.webp",
+    image: "img/im11.webp",
     questions: [
       "Что здесь действительно ваше?",
       "Что вы несете автоматически?",
@@ -175,7 +175,7 @@ export const CARDS = [
     section: "Зри в корень",
     sectionSlug: "root",
     title: "Учительский портфель / Камни",
-    image: "/img/im12.webp",
+    image: "img/im12.webp",
     questions: [
       "Что здесь действительно ваше?",
       "Что вы несете автоматически?",
@@ -191,7 +191,7 @@ export const CARDS = [
     section: "Зри в корень",
     sectionSlug: "root",
     title: "Красная ручка / Увеличительное стекло",
-    image: "/img/im13.webp",
+    image: "img/im13.webp",
     questions: [
       "Что здесь действительно ваше?",
       "Что вы несете автоматически?",
@@ -207,7 +207,7 @@ export const CARDS = [
     section: "Зри в корень",
     sectionSlug: "root",
     title: "Стопка тетрадей / Гора",
-    image: "/img/im14.webp",
+    image: "img/im14.webp",
     questions: [
       "Что здесь действительно ваше?",
       "Что вы несете автоматически?",
@@ -223,7 +223,7 @@ export const CARDS = [
     section: "Зри в корень",
     sectionSlug: "root",
     title: "Чужая папка / Чужой чемодан",
-    image: "/img/im15.webp",
+    image: "img/im15.webp",
     questions: [
       "Что здесь действительно ваше?",
       "Что вы несете автоматически?",
@@ -239,7 +239,7 @@ export const CARDS = [
     section: "Зри в корень",
     sectionSlug: "root",
     title: "Пустое место в журнале / Белое пятно",
-    image: "/img/im16.webp",
+    image: "img/im16.webp",
     questions: [
       "Что здесь действительно ваше?",
       "Что вы несете автоматически?",
@@ -255,7 +255,7 @@ export const CARDS = [
     section: "Зри в корень",
     sectionSlug: "root",
     title: "Учительские часы / Песочные часы",
-    image: "/img/im17.webp",
+    image: "img/im17.webp",
     questions: [
       "Что здесь действительно ваше?",
       "Что вы несете автоматически?",
@@ -271,7 +271,7 @@ export const CARDS = [
     section: "Мои границы",
     sectionSlug: "boundaries",
     title: "Телефон и тихая бухта",
-    image: "/img/im18.webp",
+    image: "img/im18.webp",
     questions: [
       "Что вам сейчас важно защитить?",
       "Где вы слишком быстро соглашаетесь?",
@@ -287,7 +287,7 @@ export const CARDS = [
     section: "Мои границы",
     sectionSlug: "boundaries",
     title: "Звонок после уроков / Закрытый круг",
-    image: "/img/im19.webp",
+    image: "img/im19.webp",
     questions: [
       "Что вам сейчас важно защитить?",
       "Где вы слишком быстро соглашаетесь?",
@@ -303,7 +303,7 @@ export const CARDS = [
     section: "Мои границы",
     sectionSlug: "boundaries",
     title: "Кабинет учителя / Остров",
-    image: "/img/im20.webp",
+    image: "img/im20.webp",
     questions: [
       "Что вам сейчас важно защитить?",
       "Где вы слишком быстро соглашаетесь?",
@@ -319,7 +319,7 @@ export const CARDS = [
     section: "Мои границы",
     sectionSlug: "boundaries",
     title: "Просьба коллеги / Развилка",
-    image: "/img/im21.webp",
+    image: "img/im21.webp",
     questions: [
       "Что вам сейчас важно защитить?",
       "Где вы слишком быстро соглашаетесь?",
@@ -335,7 +335,7 @@ export const CARDS = [
     section: "Мои границы",
     sectionSlug: "boundaries",
     title: "Родитель у двери / Порог",
-    image: "/img/im22.webp",
+    image: "img/im22.webp",
     questions: [
       "Что вам сейчас важно защитить?",
       "Где вы слишком быстро соглашаетесь?",
@@ -351,7 +351,7 @@ export const CARDS = [
     section: "Мои границы",
     sectionSlug: "boundaries",
     title: "Школьный коридор / Светофор",
-    image: "/img/im23.webp",
+    image: "img/im23.webp",
     questions: [
       "Что вам сейчас важно защитить?",
       "Где вы слишком быстро соглашаетесь?",
@@ -367,7 +367,7 @@ export const CARDS = [
     section: "Мои границы",
     sectionSlug: "boundaries",
     title: "Пустой стул / Свободное место",
-    image: "/img/im24.webp",
+    image: "img/im24.webp",
     questions: [
       "Что вам сейчас важно защитить?",
       "Где вы слишком быстро соглашаетесь?",
@@ -383,7 +383,7 @@ export const CARDS = [
     section: "Мои границы",
     sectionSlug: "boundaries",
     title: "Школьная роль / Снятый плащ",
-    image: "/img/im25.webp",
+    image: "img/im25.webp",
     questions: [
       "Что вам сейчас важно защитить?",
       "Где вы слишком быстро соглашаетесь?",
@@ -399,7 +399,7 @@ export const CARDS = [
     section: "Мои границы",
     sectionSlug: "boundaries",
     title: "Зеркало в учительской / Маска",
-    image: "/img/im26.webp",
+    image: "img/im26.webp",
     questions: [
       "Что вам сейчас важно защитить?",
       "Где вы слишком быстро соглашаетесь?",
@@ -415,7 +415,7 @@ export const CARDS = [
     section: "Мои границы",
     sectionSlug: "boundaries",
     title: "Пустые пять минут / Скамейка",
-    image: "/img/im27.webp",
+    image: "img/im27.webp",
     questions: [
       "Что вам сейчас важно защитить?",
       "Где вы слишком быстро соглашаетесь?",
@@ -431,7 +431,7 @@ export const CARDS = [
     section: "Что меня поддерживает",
     sectionSlug: "support",
     title: "Чашка в учительской / Теплый очаг",
-    image: "/img/im28.webp",
+    image: "img/im28.webp",
     questions: [
       "Что из этого уже есть в вашей жизни?",
       "О какой опоре вы забываете?",
@@ -447,7 +447,7 @@ export const CARDS = [
     section: "Что меня поддерживает",
     sectionSlug: "support",
     title: "Коллега рядом / Мост",
-    image: "/img/im29.webp",
+    image: "img/im29.webp",
     questions: [
       "Что из этого уже есть в вашей жизни?",
       "О какой опоре вы забываете?",
@@ -463,7 +463,7 @@ export const CARDS = [
     section: "Что меня поддерживает",
     sectionSlug: "support",
     title: "Спасибо от ученика / Луч света",
-    image: "/img/im30.webp",
+    image: "img/im30.webp",
     questions: [
       "Что из этого уже есть в вашей жизни?",
       "О какой опоре вы забываете?",
@@ -479,7 +479,7 @@ export const CARDS = [
     section: "Что меня поддерживает",
     sectionSlug: "support",
     title: "Хороший урок / Попутный ветер",
-    image: "/img/im31.webp",
+    image: "img/im31.webp",
     questions: [
       "Что из этого уже есть в вашей жизни?",
       "О какой опоре вы забываете?",
@@ -495,7 +495,7 @@ export const CARDS = [
     section: "Что меня поддерживает",
     sectionSlug: "support",
     title: "Тёплый костёр в кругу коллег",
-    image: "/img/im32.webp",
+    image: "img/im32.webp",
     questions: [
       "Что из этого уже есть в вашей жизни?",
       "О какой опоре вы забываете?",
@@ -511,7 +511,7 @@ export const CARDS = [
     section: "Что меня поддерживает",
     sectionSlug: "support",
     title: "Окно после уроков / Открытое поле",
-    image: "/img/im33.webp",
+    image: "img/im33.webp",
     questions: [
       "Что из этого уже есть в вашей жизни?",
       "О какой опоре вы забываете?",
@@ -527,7 +527,7 @@ export const CARDS = [
     section: "Что меня поддерживает",
     sectionSlug: "support",
     title: "Книга на столе / Дерево",
-    image: "/img/im34.webp",
+    image: "img/im34.webp",
     questions: [
       "Что из этого уже есть в вашей жизни?",
       "О какой опоре вы забываете?",
@@ -543,7 +543,7 @@ export const CARDS = [
     section: "Что меня поддерживает",
     sectionSlug: "support",
     title: "Музыка в наушниках / Река",
-    image: "/img/im35.webp",
+    image: "img/im35.webp",
     questions: [
       "Что из этого уже есть в вашей жизни?",
       "О какой опоре вы забываете?",
@@ -559,7 +559,7 @@ export const CARDS = [
     section: "Что меня поддерживает",
     sectionSlug: "support",
     title: "Дорога домой / Фонарь",
-    image: "/img/im36.webp",
+    image: "img/im36.webp",
     questions: [
       "Что из этого уже есть в вашей жизни?",
       "О какой опоре вы забываете?",
@@ -575,7 +575,7 @@ export const CARDS = [
     section: "Что меня поддерживает",
     sectionSlug: "support",
     title: "Свой человек / Большое дерево",
-    image: "/img/im37.webp",
+    image: "img/im37.webp",
     questions: [
       "Что из этого уже есть в вашей жизни?",
       "О какой опоре вы забываете?",
@@ -591,7 +591,7 @@ export const CARDS = [
     section: "Мои учительские суперсилы",
     sectionSlug: "strengths",
     title: "Слышу последнюю парту / Радар",
-    image: "/img/im38.webp",
+    image: "img/im38.webp",
     questions: [
       "Где эта способность уже проявлялась?",
       "Что вы считаете обычным, хотя это ваше мастерство?",
@@ -607,7 +607,7 @@ export const CARDS = [
     section: "Мои учительские суперсилы",
     sectionSlug: "strengths",
     title: "План Б / Запасной парашют",
-    image: "/img/im39.webp",
+    image: "img/im39.webp",
     questions: [
       "Где эта способность уже проявлялась?",
       "Что вы считаете обычным, хотя это ваше мастерство?",
@@ -623,7 +623,7 @@ export const CARDS = [
     section: "Мои учительские суперсилы",
     sectionSlug: "strengths",
     title: "Объясняю еще раз / Связка ключей",
-    image: "/img/im40.webp",
+    image: "img/im40.webp",
     questions: [
       "Где эта способность уже проявлялась?",
       "Что вы считаете обычным, хотя это ваше мастерство?",
@@ -639,7 +639,7 @@ export const CARDS = [
     section: "Мои учительские суперсилы",
     sectionSlug: "strengths",
     title: "Тишина одним взглядом маяк",
-    image: "/img/im41.webp",
+    image: "img/im41.webp",
     questions: [
       "Где эта способность уже проявлялась?",
       "Что вы считаете обычным, хотя это ваше мастерство?",
@@ -655,7 +655,7 @@ export const CARDS = [
     section: "Мои учительские суперсилы",
     sectionSlug: "strengths",
     title: "Вижу прогресс / Росток",
-    image: "/img/im42.webp",
+    image: "img/im42.webp",
     questions: [
       "Где эта способность уже проявлялась?",
       "Что вы считаете обычным, хотя это ваше мастерство?",
@@ -671,7 +671,7 @@ export const CARDS = [
     section: "Мои учительские суперсилы",
     sectionSlug: "strengths",
     title: "Удерживаю внимание / Нить",
-    image: "/img/im43.webp",
+    image: "img/im43.webp",
     questions: [
       "Где эта способность уже проявлялась?",
       "Что вы считаете обычным, хотя это ваше мастерство?",
@@ -687,7 +687,7 @@ export const CARDS = [
     section: "Мои учительские суперсилы",
     sectionSlug: "strengths",
     title: "Чувствую класс / Барометр",
-    image: "/img/im44.webp",
+    image: "img/im44.webp",
     questions: [
       "Где эта способность уже проявлялась?",
       "Что вы считаете обычным, хотя это ваше мастерство?",
@@ -703,7 +703,7 @@ export const CARDS = [
     section: "Мои учительские суперсилы",
     sectionSlug: "strengths",
     title: "Могу рассмешить / Солнечный зайчик",
-    image: "/img/im45.webp",
+    image: "img/im45.webp",
     questions: [
       "Где эта способность уже проявлялась?",
       "Что вы считаете обычным, хотя это ваше мастерство?",
@@ -719,7 +719,7 @@ export const CARDS = [
     section: "Мои учительские суперсилы",
     sectionSlug: "strengths",
     title: "Собираю хаос / Компас",
-    image: "/img/im46.webp",
+    image: "img/im46.webp",
     questions: [
       "Где эта способность уже проявлялась?",
       "Что вы считаете обычным, хотя это ваше мастерство?",
@@ -735,7 +735,7 @@ export const CARDS = [
     section: "Мои учительские суперсилы",
     sectionSlug: "strengths",
     title: "Верю раньше ученика / Фонарь",
-    image: "/img/im47.webp",
+    image: "img/im47.webp",
     questions: [
       "Где эта способность уже проявлялась?",
       "Что вы считаете обычным, хотя это ваше мастерство?",
@@ -751,7 +751,7 @@ export const CARDS = [
     section: "Ну, бывает",
     sectionSlug: "humor",
     title: "План урока был хороший / Карточный домик",
-    image: "/img/im48.webp",
+    image: "img/im48.webp",
     questions: [
       "Что здесь настолько знакомо, что уже смешно?",
       "Что сегодня можно не исправлять?",
@@ -766,7 +766,7 @@ export const CARDS = [
     section: "Ну, бывает",
     sectionSlug: "humor",
     title: "Проектор решил отдохнуть / Черный квадрат",
-    image: "/img/im49.webp",
+    image: "img/im49.webp",
     questions: [
       "Что здесь настолько знакомо, что уже смешно?",
       "Что сегодня можно не исправлять?",
@@ -781,7 +781,7 @@ export const CARDS = [
     section: "Ну, бывает",
     sectionSlug: "humor",
     title: "Родительский чат проснулся / Вулкан",
-    image: "/img/im50.webp",
+    image: "img/im50.webp",
     questions: [
       "Что здесь настолько знакомо, что уже смешно?",
       "Что сегодня можно не исправлять?",
@@ -796,7 +796,7 @@ export const CARDS = [
     section: "Ну, бывает",
     sectionSlug: "humor",
     title: "Маленькая просьба / Снежный ком",
-    image: "/img/im51.webp",
+    image: "img/im51.webp",
     questions: [
       "Что здесь настолько знакомо, что уже смешно?",
       "Что сегодня можно не исправлять?",
@@ -811,7 +811,7 @@ export const CARDS = [
     section: "Ну, бывает",
     sectionSlug: "humor",
     title: "Пятница. Седьмой урок / Последний вагон",
-    image: "/img/im52.webp",
+    image: "img/im52.webp",
     questions: [
       "Что здесь настолько знакомо, что уже смешно?",
       "Что сегодня можно не исправлять?",
@@ -826,7 +826,7 @@ export const CARDS = [
     section: "Ну, бывает",
     sectionSlug: "humor",
     title: "Все срочно / Сирена",
-    image: "/img/im53.webp",
+    image: "img/im53.webp",
     questions: [
       "Что здесь настолько знакомо, что уже смешно?",
       "Что сегодня можно не исправлять?",
@@ -841,7 +841,7 @@ export const CARDS = [
     section: "Ну, бывает",
     sectionSlug: "humor",
     title: "Методическая идея в 23:48 / Метеорит",
-    image: "/img/im54.webp",
+    image: "img/im54.webp",
     questions: [
       "Что здесь настолько знакомо, что уже смешно?",
       "Что сегодня можно не исправлять?",
@@ -856,7 +856,7 @@ export const CARDS = [
     section: "Ну, бывает",
     sectionSlug: "humor",
     title: "Сегодня без подвига / Пьедестал",
-    image: "/img/im55.webp",
+    image: "img/im55.webp",
     questions: [
       "Что здесь настолько знакомо, что уже смешно?",
       "Что сегодня можно не исправлять?",
@@ -871,7 +871,7 @@ export const CARDS = [
     section: "Ну, бывает",
     sectionSlug: "humor",
     title: "Звонок был для учителя / Спасательная шлюпка",
-    image: "/img/im56.webp",
+    image: "img/im56.webp",
     questions: [
       "Что здесь настолько знакомо, что уже смешно?",
       "Что сегодня можно не исправлять?",
@@ -886,7 +886,7 @@ export const CARDS = [
     section: "Ну, бывает",
     sectionSlug: "humor",
     title: "Еще один отчет / Бесконечный свиток",
-    image: "/img/im57.webp",
+    image: "img/im57.webp",
     questions: [
       "Что здесь настолько знакомо, что уже смешно?",
       "Что сегодня можно не исправлять?",
@@ -901,7 +901,7 @@ export const CARDS = [
     section: "Я расту, но не бегу",
     sectionSlug: "growth",
     title: "В своем темпе / Тропинка",
-    image: "/img/im58.webp",
+    image: "img/im58.webp",
     questions: [
       "Что у вас уже растет?",
       "Что хочется попробовать без обязательства стать идеальным?",
@@ -916,7 +916,7 @@ export const CARDS = [
     section: "Я расту, но не бегу",
     sectionSlug: "growth",
     title: "Мой сильный урок / Маяк",
-    image: "/img/im59.webp",
+    image: "img/im59.webp",
     questions: [
       "Что у вас уже растет?",
       "Что хочется попробовать без обязательства стать идеальным?",
@@ -931,7 +931,7 @@ export const CARDS = [
     section: "Я расту, но не бегу",
     sectionSlug: "growth",
     title: "Мой профессиональный почерк / Узор",
-    image: "/img/im60.webp",
+    image: "img/im60.webp",
     questions: [
       "Что у вас уже растет?",
       "Что хочется попробовать без обязательства стать идеальным?",
@@ -946,7 +946,7 @@ export const CARDS = [
     section: "Я расту, но не бегу",
     sectionSlug: "growth",
     title: "Следующая ступень / Лестница",
-    image: "/img/im61.webp",
+    image: "img/im61.webp",
     questions: [
       "Что у вас уже растет?",
       "Что хочется попробовать без обязательства стать идеальным?",
@@ -961,7 +961,7 @@ export const CARDS = [
     section: "Я расту, но не бегу",
     sectionSlug: "growth",
     title: "Хочу попробовать / Открытая дверь",
-    image: "/img/im62.webp",
+    image: "img/im62.webp",
     questions: [
       "Что у вас уже растет?",
       "Что хочется попробовать без обязательства стать идеальным?",
@@ -976,7 +976,7 @@ export const CARDS = [
     section: "Я расту, но не бегу",
     sectionSlug: "growth",
     title: "Ошибка как материал / Глина",
-    image: "/img/im63.webp",
+    image: "img/im63.webp",
     questions: [
       "Что у вас уже растет?",
       "Что хочется попробовать без обязательства стать идеальным?",
@@ -991,7 +991,7 @@ export const CARDS = [
     section: "Я расту, но не бегу",
     sectionSlug: "growth",
     title: "Мне есть чем поделиться / Свеча",
-    image: "/img/im64.webp",
+    image: "img/im64.webp",
     questions: [
       "Что у вас уже растет?",
       "Что хочется попробовать без обязательства стать идеальным?",
@@ -1006,7 +1006,7 @@ export const CARDS = [
     section: "Я расту, но не бегу",
     sectionSlug: "growth",
     title: "Учусь у других / Мост",
-    image: "/img/im65.webp",
+    image: "img/im65.webp",
     questions: [
       "Что у вас уже растет?",
       "Что хочется попробовать без обязательства стать идеальным?",
@@ -1021,7 +1021,7 @@ export const CARDS = [
     section: "Я расту, но не бегу",
     sectionSlug: "growth",
     title: "Через три года / Горизонт",
-    image: "/img/im66.webp",
+    image: "img/im66.webp",
     questions: [
       "Что у вас уже растет?",
       "Что хочется попробовать без обязательства стать идеальным?",
@@ -1036,7 +1036,7 @@ export const CARDS = [
     section: "Я расту, но не бегу",
     sectionSlug: "growth",
     title: "Рост без гонки / Сад",
-    image: "/img/im67.webp",
+    image: "img/im67.webp",
     questions: [
       "Что у вас уже растет?",
       "Что хочется попробовать без обязательства стать идеальным?",
@@ -1051,7 +1051,7 @@ export const CARDS = [
     section: "Мой маленький следующий шаг",
     sectionSlug: "step",
     title: "Сегодня / Первый шаг",
-    image: "/img/im68.webp",
+    image: "img/im68.webp",
     questions: [
       "Что можно сделать один раз?",
       "Какой шаг не требует нового проекта?",
@@ -1067,7 +1067,7 @@ export const CARDS = [
     section: "Мой маленький следующий шаг",
     sectionSlug: "step",
     title: "На этой неделе / Календарь",
-    image: "/img/im69.webp",
+    image: "img/im69.webp",
     questions: [
       "Что можно сделать один раз?",
       "Какой шаг не требует нового проекта?",
@@ -1083,7 +1083,7 @@ export const CARDS = [
     section: "Мой маленький следующий шаг",
     sectionSlug: "step",
     title: "Попрошу помощи / Протянутая рука",
-    image: "/img/im70.webp",
+    image: "img/im70.webp",
     questions: [
       "Что можно сделать один раз?",
       "Какой шаг не требует нового проекта?",
@@ -1099,7 +1099,7 @@ export const CARDS = [
     section: "Мой маленький следующий шаг",
     sectionSlug: "step",
     title: "Отпущу лишнее / Легкий портфель",
-    image: "/img/im71.webp",
+    image: "img/im71.webp",
     questions: [
       "Что можно сделать один раз?",
       "Какой шаг не требует нового проекта?",
@@ -1115,7 +1115,7 @@ export const CARDS = [
     section: "Мой маленький следующий шаг",
     sectionSlug: "step",
     title: "Выберу главное / Компас",
-    image: "/img/im72.webp",
+    image: "img/im72.webp",
     questions: [
       "Что можно сделать один раз?",
       "Какой шаг не требует нового проекта?",
@@ -1131,7 +1131,7 @@ export const CARDS = [
     section: "Мой маленький следующий шаг",
     sectionSlug: "step",
     title: "Попробую один раз / Мостик",
-    image: "/img/im73.webp",
+    image: "img/im73.webp",
     questions: [
       "Что можно сделать один раз?",
       "Какой шаг не требует нового проекта?",
@@ -1147,7 +1147,7 @@ export const CARDS = [
     section: "Мой маленький следующий шаг",
     sectionSlug: "step",
     title: "Вернусь к идее / Нить",
-    image: "/img/im74.webp",
+    image: "img/im74.webp",
     questions: [
       "Что можно сделать один раз?",
       "Какой шаг не требует нового проекта?",
@@ -1163,7 +1163,7 @@ export const CARDS = [
     section: "Мой маленький следующий шаг",
     sectionSlug: "step",
     title: "Оставлю время себе / Чаша",
-    image: "/img/im75.webp",
+    image: "img/im75.webp",
     questions: [
       "Что можно сделать один раз?",
       "Какой шаг не требует нового проекта?",
@@ -1179,7 +1179,7 @@ export const CARDS = [
     section: "Мой маленький следующий шаг",
     sectionSlug: "step",
     title: "Скажу спокойное нет / Порог",
-    image: "/img/im76.webp",
+    image: "img/im76.webp",
     questions: [
       "Что можно сделать один раз?",
       "Какой шаг не требует нового проекта?",
@@ -1195,7 +1195,7 @@ export const CARDS = [
     section: "Мой маленький следующий шаг",
     sectionSlug: "step",
     title: "Замечу результат / Маленький фонарь",
-    image: "/img/im77.webp",
+    image: "img/im77.webp",
     questions: [
       "Что можно сделать один раз?",
       "Какой шаг не требует нового проекта?",
@@ -1211,7 +1211,7 @@ export const CARDS = [
     section: "Мне можно",
     sectionSlug: "permission",
     title: "Сегодня достаточно / Тихий берег",
-    image: "/img/im78.webp",
+    image: "img/im78.webp",
     questions: [
       "Что вы можете себе сегодня разрешить?",
       "Что можно не закончить сегодня?",
@@ -1227,7 +1227,7 @@ export const CARDS = [
     section: "Мне можно",
     sectionSlug: "permission",
     title: "Можно не успеть все / Песочные часы",
-    image: "/img/im79.webp",
+    image: "img/im79.webp",
     questions: [
       "Что вы можете себе сегодня разрешить?",
       "Что можно не закончить сегодня?",
@@ -1243,7 +1243,7 @@ export const CARDS = [
     section: "Мне можно",
     sectionSlug: "permission",
     title: "Я не только учитель / Открытое окно",
-    image: "/img/im80.webp",
+    image: "img/im80.webp",
     questions: [
       "Что вы можете себе сегодня разрешить?",
       "Что можно не закончить сегодня?",
@@ -1259,7 +1259,7 @@ export const CARDS = [
     section: "Мне можно",
     sectionSlug: "permission",
     title: "Продолжу завтра / Закрытая книга",
-    image: "/img/im81.webp",
+    image: "img/im81.webp",
     questions: [
       "Что вы можете себе сегодня разрешить?",
       "Что можно не закончить сегодня?",
@@ -1275,7 +1275,7 @@ export const CARDS = [
     section: "Мне можно",
     sectionSlug: "permission",
     title: "Можно попросить помощи / Мост рядом",
-    image: "/img/im82.webp",
+    image: "img/im82.webp",
     questions: [
       "Что вы можете себе сегодня разрешить?",
       "Что можно не закончить сегодня?",
@@ -1291,7 +1291,7 @@ export const CARDS = [
     section: "Мне можно",
     sectionSlug: "permission",
     title: "Можно изменить решение / Развилка",
-    image: "/img/im83.webp",
+    image: "img/im83.webp",
     questions: [
       "Что вы можете себе сегодня разрешить?",
       "Что можно не закончить сегодня?",
@@ -1307,7 +1307,7 @@ export const CARDS = [
     section: "Мне можно",
     sectionSlug: "permission",
     title: "Можно не быть идеальным / Черновик",
-    image: "/img/im84.webp",
+    image: "img/im84.webp",
     questions: [
       "Что вы можете себе сегодня разрешить?",
       "Что можно не закончить сегодня?",
@@ -1323,7 +1323,7 @@ export const CARDS = [
     section: "Мне можно",
     sectionSlug: "permission",
     title: "Можно выбрать себя / Домашний ключ",
-    image: "/img/im85.webp",
+    image: "img/im85.webp",
     questions: [
       "Что вы можете себе сегодня разрешить?",
       "Что можно не закончить сегодня?",

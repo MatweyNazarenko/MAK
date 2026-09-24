@@ -51,5 +51,5 @@ export default defineConfig({
 			manifest: manifest,
 		}),
 	],
-	base: '/MAK/',
+	base: '/',
 });

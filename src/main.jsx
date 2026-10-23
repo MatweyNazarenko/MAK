@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 import App from './App';
 import './styles.css';
+import './editorial.css';
 
 import { registerSW } from 'virtual:pwa-register';
 

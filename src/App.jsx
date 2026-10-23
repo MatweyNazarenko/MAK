@@ -760,7 +760,10 @@ export default function App() {
     <div className="app">
       <header className="topbar">
         <div className="topbar-inner">
-          <div className="brand">МАК для учителя</div>
+          <button className="brand" type="button" onClick={() => navigate("home")} aria-label="МАК для учителя — на главную">
+            <span className="brand-mark" aria-hidden="true">✳</span>
+            <span>МАК для учителя<small>Пространство бережной рефлексии</small></span>
+          </button>
 
           <div className="top-actions">
             <span className="privacy-badge">🔒 локально</span>
@@ -786,7 +789,7 @@ export default function App() {
                   Иногда достаточно одной карты
                 </span>
 
-                <h1>Что вам сейчас нужно?</h1>
+                <h1>Что вам сейчас <em>нужно?</em></h1>
 
                 <p>
                   Не еще одна задача. Небольшая пауза, в
@@ -814,11 +817,17 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="panel hero-art">
+              <div className="hero-art">
+                <span className="hero-orbit" aria-hidden="true" />
                 <img src={CARD_BACK} alt="Рубашка МАК" />
+                <span className="art-caption">Одна карта. Немного тишины. Время для себя.</span>
               </div>
             </div>
 
+            <div className="section-title practice-heading">
+              <div><span className="eyebrow">В своём темпе</span><h2>С чего начнём?</h2></div>
+              <span className="muted">Выберите небольшую паузу для себя</span>
+            </div>
             <div className="quick-grid">
               <button
                 type="button"
@@ -1772,7 +1781,7 @@ export default function App() {
         )}
       </main>
 
-      <nav className="bottom-nav">
+      <nav className="bottom-nav" aria-label="Основная навигация">
         <div className="bottom-inner">
           {[
             ["home", "▣", "Сегодня"],

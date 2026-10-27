@@ -1820,16 +1820,14 @@ export default function App() {
           }
         }}
       >
-        <div className="sheet">
-          <div
-            className="section-title"
-            style={{ marginTop: 0 }}
-          >
-            <h2>Настройки</h2>
-
+        <div className="sheet settings-sheet">
+          <div className="settings-header">
+            <div className="settings-header-left">
+              <h2>Настройки</h2>
+            </div>
             <button
               type="button"
-              className="icon-btn"
+              className="settings-close"
               aria-label="Закрыть настройки"
               onClick={() => setSettingsOpen(false)}
             >
@@ -1837,64 +1835,67 @@ export default function App() {
             </button>
           </div>
 
-          <div className="toggle-line">
-            <div>
-              <strong>Режим без сохранения</strong>
+          <div className="settings-divider" />
 
-              <div
-                className="muted"
-                style={{ fontSize: 13 }}
+          <div className="settings-section">
+            <div className="settings-section-label">
+              Основное
+            </div>
+            
+            <div className="toggle-line" style={{ marginTop: 10 }}>
+              <div>
+                <strong>Режим без сохранения</strong>
+                <div className="muted" style={{ fontSize: 13 }}>
+                  Можно писать и экспортировать, но история не сохраняется.
+                </div>
+              </div>
+              <button
+                type="button"
+                className={`switch ${storageState.privateMode ? "on" : ""}`}
+                aria-label="Режим без сохранения"
+                onClick={togglePrivacy}
+              />
+            </div>
+          </div>
+
+          <div className="settings-section">
+            <div className="settings-section-label">
+              Данные
+            </div>
+            
+            <div className="settings-actions" style={{ marginTop: 10 }}>
+              <button
+                type="button"
+                className="settings-action-btn"
+                onClick={backupJson}
               >
-                Можно писать и экспортировать, но история не
-                сохраняется.
+                <div>
+                  <strong>Резервная копия</strong>
+                  <small>Скачать JSON</small>
+                </div>
+              </button>
+              
+              <button
+                type="button"
+                className="settings-action-btn settings-action-danger"
+                onClick={eraseNotes}
+              >
+                <div>
+                  <strong>Удалить всё</strong>
+                  <small>Очистить историю</small>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div className="settings-section">
+            <div className="privacy-strip" style={{ marginTop: 0 }}>
+              <div>
+                <strong>Ваши заметки остаются на этом устройстве.</strong>
+                <br />
+                <span className="muted">Нет аккаунта, регистрации и отправки записей на сервер.</span>
               </div>
             </div>
-
-            <button
-              type="button"
-              className={`switch ${
-                storageState.privateMode ? "on" : ""
-              }`}
-              aria-label="Режим без сохранения"
-              onClick={togglePrivacy}
-            />
-          </div>
-
-          <div className="privacy-strip">
-            <span>🔒</span>
-
-            <div>
-              <strong>
-                Ваши заметки остаются на этом устройстве.
-              </strong>
-              <br />
-
-              <span className="muted">
-                Нет аккаунта, регистрации и отправки записей
-                на сервер.
-              </span>
-            </div>
-          </div>
-
-          <div
-            className="btn-row"
-            style={{ marginTop: 15 }}
-          >
-            <button
-              type="button"
-              className="btn secondary"
-              onClick={backupJson}
-            >
-              Резервная копия JSON
-            </button>
-
-            <button
-              type="button"
-              className="btn danger"
-              onClick={eraseNotes}
-            >
-              Удалить записи
-            </button>
           </div>
         </div>
       </div>

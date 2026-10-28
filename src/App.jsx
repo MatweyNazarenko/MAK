@@ -16,6 +16,37 @@ import {
 } from "./data";
 
 import {
+  Zap,
+  Layers,
+  Moon,
+  Flame,
+  DoorClosed,
+  TrendingDown,
+  Compass,
+  Coffee,
+  Shuffle,
+  X,
+  EyeOff,
+  Download,
+  Trash2,
+  Lock,
+  Settings,
+  Upload,
+} from "lucide-react";
+
+const STATE_ICONS = {
+  Zap,
+  Layers,
+  Moon,
+  Flame,
+  DoorClosed,
+  TrendingDown,
+  Compass,
+  Coffee,
+  Shuffle,
+};
+
+import {
   createDocxBlob,
   downloadBlob,
   formatDate,
@@ -24,6 +55,7 @@ import {
 } from "./documentUtils";
 
 import MethodView from "./components/MethodView";
+import GuidedPractice from "./components/GuidedPractice";
 
 const STORAGE_KEY = "mak_teacher_v1";
 
@@ -95,6 +127,11 @@ function getInitialState() {
 export default function App() {
   const [storageState, setStorageState] = useState(getInitialState);
 
+  const [guide, setGuide] = useState({ step: 0, request: "", card: null, text: "", savedText: null });
+  const [guideDismissed, setGuideDismissed] = useState(() => {
+    try { return localStorage.getItem("mak_teacher_guide_seen") === "1"; }
+    catch { return false; }
+  });
   const [view, setView] = useState("home");
   const [lastView, setLastView] = useState("home");
 
@@ -165,6 +202,55 @@ export default function App() {
       top: 0,
       behavior: "smooth",
     });
+  }
+
+  function dismissGuideInvitation() {
+    setGuideDismissed(true);
+    try { localStorage.setItem("mak_teacher_guide_seen", "1"); }
+    catch { /* The invitation can still be dismissed for this visit. */ }
+  }
+
+  function startGuide() {
+    dismissGuideInvitation();
+    if (view === "card" && currentCard?.id === guide.card?.id) {
+      setGuide((current) => ({ ...current, text: noteText }));
+    }
+    navigate("guide");
+  }
+
+  function closeGuide() {
+    dismissGuideInvitation();
+    if (guide.card) {
+      openCard(guide.card, "home");
+      setQuestionOverride(guide.request || "Что вы заметили в этой карте?");
+      setNoteText(guide.text);
+      setNotePanelOpen(Boolean(guide.text) || guide.step === 3);
+    } else {
+      navigate("home");
+    }
+    setTimeout(() => document.querySelector(".guide-help")?.focus(), 0);
+  }
+
+  function saveGuideNote() {
+    if (storageState.privateMode) return "Сейчас включён режим без сохранения. Текст остаётся в этой практике, но не записывается в заметки.";
+    if (!guide.text.trim()) return "Можно оставить поле пустым и завершить без записи.";
+    if (guide.savedText === guide.text) return "Эта мысль уже сохранена в разделе «Мои заметки».";
+    const note = {
+      id: `n${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+      date: new Date().toISOString(), cardId: guide.card.id,
+      cardTitle: guide.card.title, section: guide.card.section,
+      question: guide.request || "Что я хочу забрать с собой?",
+      type: "thought", text: guide.text.trim(), due: null, status: "thinking",
+    };
+    const next = { ...storageState, notes: [note, ...storageState.notes] };
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    } catch {
+      return "Браузер не смог сохранить заметку. Текст остался здесь — скопируйте его, прежде чем закрывать страницу.";
+    }
+    setStorageState(next);
+    setGuide((current) => ({ ...current, savedText: current.text }));
+    return "Мысль сохранена в разделе «Мои заметки» на этом устройстве.";
   }
 
   function getCardPool(section = "all") {
@@ -761,11 +847,19 @@ export default function App() {
       <header className="topbar">
         <div className="topbar-inner">
           <button className="brand" type="button" onClick={() => navigate("home")} aria-label="МАК для учителя — на главную">
-            <span className="brand-mark" aria-hidden="true">✳</span>
+            <span className="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 21V13" />
+                <path d="M12 13C8.5 13 6 10.5 6 7.5C6 5.5 7.5 4 9.5 4C11 4 12 5 12 6.5C12 5 13 4 14.5 4C16.5 4 18 5.5 18 7.5C18 10.5 15.5 13 12 13Z" />
+                <circle cx="12" cy="8" r="1.5" fill="currentColor" fillOpacity="0.2" />
+                <path d="M9 18C10 17 11 16.5 12 16.5C13 16.5 14 17 15 18" />
+              </svg>
+            </span>
             <span>МАК для учителя<small>Пространство бережной рефлексии</small></span>
           </button>
 
           <div className="top-actions">
+            <button type="button" className="btn ghost guide-help" onClick={startGuide} aria-label="Помощь — практика с подсказками">Помощь</button>
             <span className="privacy-badge">🔒 локально</span>
 
             <button
@@ -780,7 +874,21 @@ export default function App() {
         </div>
       </header>
 
-      <main>
+      <a className="skip-link" href="#main-content">Перейти к содержимому</a>
+      <main id="main-content" tabIndex={-1}>
+        <GuidedPractice active={view === "guide"} session={guide} onChange={setGuide} onClose={closeGuide} onSave={saveGuideNote} onNotes={() => navigate("notes")} privateMode={storageState.privateMode} onFinish={() => { dismissGuideInvitation(); navigate("home"); }} />
+        {view === "home" && !guideDismissed && (
+          <aside className="guide-invitation" aria-labelledby="guide-invitation-title">
+            <span className="eyebrow">Первая карта · с подсказками</span>
+            <h2 id="guide-invitation-title">Начнём с одной карты?</h2>
+            <p>Небольшая практика поможет освоиться — без правильных ответов и спешки. Можно уделить ей пару минут или задержаться, если захочется.</p>
+            <div className="btn-row">
+              <button type="button" className="btn" onClick={startGuide}>Попробовать с подсказками</button>
+              <button type="button" className="btn ghost" onClick={dismissGuideInvitation}>Пока самостоятельно</button>
+            </div>
+            <small className="muted">Подсказки можно закрыть в любой момент и вернуть через «Помощь».</small>
+          </aside>
+        )}
         {view === "home" && (
           <section className="view active">
             <div className="hero">
@@ -815,6 +923,7 @@ export default function App() {
                     Мне нужно разгрузиться
                   </button>
                 </div>
+                <div className="hero-footnote">2–3 минуты для себя · без правильных ответов</div>
               </div>
 
               <div className="hero-art">
@@ -963,17 +1072,22 @@ export default function App() {
             </p>
 
             <div className="state-grid">
-              {stateOptions.map((option) => (
-                <button
-                  type="button"
-                  className="state-btn"
-                  key={option[1]}
-                  onClick={() => chooseState(option)}
-                >
-                  <span>{option[0]}</span>
-                  <strong>{option[1]}</strong>
-                </button>
-              ))}
+              {stateOptions.map((option) => {
+                const IconComp = STATE_ICONS[option[0]];
+                return (
+                  <button
+                    type="button"
+                    className="state-btn"
+                    key={option[1]}
+                    onClick={() => chooseState(option)}
+                  >
+                    <span className="state-icon">
+                      {IconComp ? <IconComp size={22} strokeWidth={1.6} /> : option[0]}
+                    </span>
+                    <strong>{option[1]}</strong>
+                  </button>
+                );
+              })}
             </div>
           </section>
         )}
@@ -1294,6 +1408,7 @@ export default function App() {
                   </span>
                   <h3>{scenario.title}</h3>
                   <p>{scenario.intro}</p>
+                  <span className="scenario-cue">Начать практику <span aria-hidden="true">↗</span></span>
                 </button>
               ))}
             </div>
@@ -1407,6 +1522,8 @@ export default function App() {
 
             <input
               className="search"
+              type="search"
+              aria-label="Найти карту"
               placeholder="Найти карту…"
               value={deckSearch}
               onChange={(event) =>
@@ -1441,6 +1558,18 @@ export default function App() {
               ))}
             </div>
 
+            <div className="deck-status" role="status">
+              <span>Найдено карт: {filteredDeck.length}</span>
+              {(deckSearch || deckFilter !== "all") && (
+                <button type="button" className="link-btn" onClick={() => { setDeckSearch(""); setDeckFilter("all"); }}>Сбросить фильтры</button>
+              )}
+            </div>
+            {filteredDeck.length === 0 && (
+              <div className="empty">
+                <strong>Такой карты пока не нашлось</strong>
+                Попробуйте другое слово или сбросьте выбранный раздел.
+              </div>
+            )}
             <div className="deck-grid">
               {filteredDeck.map((card) => (
                 <button
@@ -1633,10 +1762,9 @@ export default function App() {
                 })
               ) : (
                 <div className="empty">
-                  Здесь пока пусто.
-                  <br />
-                  Сохраненная мысль или история появится
-                  здесь только по вашему желанию.
+                  <strong>Место для ваших открытий</strong>
+                  <p>Сохраненная мысль или история появится здесь только по вашему желанию.</p>
+                  <button type="button" className="btn secondary" onClick={() => navigate("deck")}>Выбрать карту</button>
                 </div>
               )}
             </div>
@@ -1784,11 +1912,11 @@ export default function App() {
       <nav className="bottom-nav" aria-label="Основная навигация">
         <div className="bottom-inner">
           {[
-            ["home", "▣", "Сегодня"],
-            ["scenarios", "⌘", "Сценарии"],
-            ["deck", "▤", "Колода"],
-            ["notes", "♡", "Мое"],
-            ["method", "◫", "Методика"],
+            ["home", "☀", "Сегодня"],
+            ["scenarios", "✦", "Сценарии"],
+            ["deck", "⊞", "Колода"],
+            ["notes", "◉", "Мое"],
+            ["method", "✎", "Методика"],
           ].map(([name, icon, title]) => (
             <button
               type="button"
@@ -1796,6 +1924,7 @@ export default function App() {
                 view === name ? "active" : ""
               }`}
               key={name}
+              aria-current={view === name ? "page" : undefined}
               onClick={() => navigate(name)}
             >
               <span className="nav-ico">{icon}</span>
@@ -1821,8 +1950,12 @@ export default function App() {
         }}
       >
         <div className="sheet settings-sheet">
+          {/* ── Header ── */}
           <div className="settings-header">
             <div className="settings-header-left">
+              <span className="settings-header-icon">
+                <Settings size={20} strokeWidth={1.8} />
+              </span>
               <h2>Настройки</h2>
             </div>
             <button
@@ -1831,23 +1964,23 @@ export default function App() {
               aria-label="Закрыть настройки"
               onClick={() => setSettingsOpen(false)}
             >
-              ×
+              <X size={18} strokeWidth={2} />
             </button>
           </div>
 
-          <div className="settings-divider" />
-
+          {/* ── Основное ── */}
           <div className="settings-section">
-            <div className="settings-section-label">
-              Основное
-            </div>
-            
-            <div className="toggle-line" style={{ marginTop: 10 }}>
-              <div>
+            <div className="settings-section-label">Основное</div>
+
+            <div className="settings-row">
+              <span className="settings-row-icon settings-row-icon--sage">
+                <EyeOff size={18} strokeWidth={1.8} />
+              </span>
+              <div className="settings-row-text">
                 <strong>Режим без сохранения</strong>
-                <div className="muted" style={{ fontSize: 13 }}>
+                <span className="settings-row-hint">
                   Можно писать и экспортировать, но история не сохраняется.
-                </div>
+                </span>
               </div>
               <button
                 type="button"
@@ -1858,43 +1991,40 @@ export default function App() {
             </div>
           </div>
 
+          <div className="settings-divider" />
+
+          {/* ── Данные ── */}
           <div className="settings-section">
-            <div className="settings-section-label">
-              Данные
+            <div className="settings-section-label">Данные</div>
+
+            <div className="settings-row settings-row--btn" onClick={backupJson} role="button" tabIndex={0}>
+              <span className="settings-row-icon settings-row-icon--gold">
+                <Download size={18} strokeWidth={1.8} />
+              </span>
+              <div className="settings-row-text">
+                <strong>Резервная копия</strong>
+                <span className="settings-row-hint">Скачать JSON со всеми заметками</span>
+              </div>
             </div>
-            
-            <div className="settings-actions" style={{ marginTop: 10 }}>
-              <button
-                type="button"
-                className="settings-action-btn"
-                onClick={backupJson}
-              >
-                <div>
-                  <strong>Резервная копия</strong>
-                  <small>Скачать JSON</small>
-                </div>
-              </button>
-              
-              <button
-                type="button"
-                className="settings-action-btn settings-action-danger"
-                onClick={eraseNotes}
-              >
-                <div>
-                  <strong>Удалить всё</strong>
-                  <small>Очистить историю</small>
-                </div>
-              </button>
+
+            <div className="settings-row settings-row--btn settings-row--danger" onClick={eraseNotes} role="button" tabIndex={0}>
+              <span className="settings-row-icon settings-row-icon--rose">
+                <Trash2 size={18} strokeWidth={1.8} />
+              </span>
+              <div className="settings-row-text">
+                <strong>Удалить всё</strong>
+                <span className="settings-row-hint">Очистить историю этого проекта</span>
+              </div>
             </div>
           </div>
 
-          <div className="settings-section">
-            <div className="privacy-strip" style={{ marginTop: 0 }}>
-              <div>
-                <strong>Ваши заметки остаются на этом устройстве.</strong>
-                <br />
-                <span className="muted">Нет аккаунта, регистрации и отправки записей на сервер.</span>
-              </div>
+          {/* ── Privacy note ── */}
+          <div className="settings-privacy">
+            <Lock size={15} strokeWidth={1.8} />
+            <div>
+              <strong>Ваши заметки остаются на этом устройстве.</strong>
+              <br />
+              <span className="muted">Нет аккаунта, регистрации и отправки записей на сервер.</span>
             </div>
           </div>
         </div>

@@ -41,7 +41,7 @@ export default function MethodView({
         </blockquote>
       </section>
 
-      <details open>
+      <details className="method-card" open>
         <summary>
           Стресс, выгорание и необходимость разгрузки
         </summary>
@@ -76,7 +76,7 @@ export default function MethodView({
         </div>
       </details>
 
-      <details>
+      <details className="method-card">
         <summary>Когда стоит достать карту</summary>
 
         <div className="details-body">
@@ -98,7 +98,7 @@ export default function MethodView({
         </div>
       </details>
 
-      <details>
+      <details className="method-card">
         <summary>Как работает карта: 4 вопроса</summary>
 
         <div className="details-body">
@@ -125,7 +125,7 @@ export default function MethodView({
         </div>
       </details>
 
-      <details>
+      <details className="method-card">
         <summary>Открытый и случайный выбор</summary>
 
         <div className="details-body">
@@ -150,7 +150,7 @@ export default function MethodView({
         </div>
       </details>
 
-      <details>
+      <details className="method-card">
         <summary>Главное правило</summary>
 
         <div className="details-body">
@@ -166,7 +166,7 @@ export default function MethodView({
         </div>
       </details>
 
-      <details>
+      <details className="method-card">
         <summary>Не совет, но вопрос</summary>
 
         <div className="details-body">
@@ -180,7 +180,7 @@ export default function MethodView({
         </div>
       </details>
 
-      <details>
+      <details className="method-card">
         <summary>Если карта задела</summary>
 
         <div className="details-body">
@@ -195,7 +195,7 @@ export default function MethodView({
         </div>
       </details>
 
-      <details>
+      <details className="method-card">
         <summary>
           Когда лучше обратиться за помощью
         </summary>
@@ -211,7 +211,7 @@ export default function MethodView({
         </div>
       </details>
 
-      <details>
+      <details className="method-card">
         <summary>Конфиденциальность</summary>
 
         <div className="details-body">

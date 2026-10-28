@@ -1,0 +1,43 @@
+.guided-practice[hidden] { display: none; }
+.guided-practice { max-width: 960px; margin: 0 auto; }
+.guide-top, .guide-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.guide-progress { display: grid; grid-template-columns: repeat(4, 1fr); list-style: none; padding: 0; margin: 28px 0; border-bottom: 1px solid var(--line); }
+.guide-progress li { padding: 12px 4px 18px; color: var(--muted); font-size: 14px; }
+.guide-progress li[aria-current] { color: var(--accent); border-bottom: 3px solid var(--sage); }
+.guide-progress span { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: 8px; background: var(--sage2); border-radius: 50%; }
+.guide-heading { max-width: 760px; margin-bottom: 30px; }
+.guide-heading h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.15; margin: 12px 0; }
+.guide-heading h1:focus { outline: none; }
+.guide-paper, .guide-invitation { padding: 32px; border: 1px solid var(--line); background: var(--paper2); border-radius: 22px; }
+.guide-paper > p:first-child { margin-top: 0; }
+.guide-paper label { display: block; font-weight: 600; margin: 20px 0 10px; }
+.guide-paper textarea { width: 100%; resize: vertical; border: 1px solid var(--line); background: var(--paper); color: var(--ink); padding: 16px; border-radius: 12px; font-size: 16px; }
+.guide-requests { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0; }
+.guide-requests button { text-align: left; }
+.guide-requests [aria-pressed=true] { background: var(--sage2); border-color: var(--sage); }
+.guide-choice { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: 32px; margin-bottom: 24px; }
+.guide-choice h2 { font-size: 30px; }
+.guide-preview { width: 100%; max-width: 220px; border-radius: 14px; justify-self: center; }
+.guide-image { width: 100%; border-radius: 14px; }
+.guide-prompt { font: 28px/1.4 var(--serif); padding: 22px; border-radius: 16px; background: var(--sage2); }
+.guide-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
+.guide-gallery button { padding: 8px; border: 1px solid var(--line); background: var(--paper); border-radius: 12px; color: var(--ink); }
+.guide-gallery img { width: 100%; border-radius: 8px; }
+.guide-gallery span { display: block; font-size: 13px; margin-top: 8px; }
+.guide-footer { margin: 24px 0; color: var(--muted); font-size: 13px; }
+.guide-invitation { margin-bottom: 30px; border-left: 4px solid var(--sage); }
+.guide-invitation h2 { font-size: 30px; margin: 8px 0; }
+.guide-invitation p { max-width: 720px; }
+.guide-help { white-space: nowrap; }
+@media (max-width: 600px) {
+  .guide-paper, .guide-invitation { padding: 20px; }
+  .guide-choice { grid-template-columns: 1fr; gap: 20px; }
+  .guide-image { max-width: 300px; justify-self: center; }
+  .guide-progress li { font-size: 11px; }
+  .guide-progress span { display: grid; margin: 0 0 8px; }
+  .guide-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .guide-help { padding: 10px 8px; font-size: 12px; }
+  .topbar .brand small { display: none; }
+  .topbar .brand-mark { display: none; }
+  .guide-paper .btn-row { align-items: stretch; flex-direction: column; }
+}
